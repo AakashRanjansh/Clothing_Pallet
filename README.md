@@ -14,3 +14,11 @@ Email: sarthak@gmail.com
 pass: sarthak
 
 ```
+
+### All Changes Done as Discussed
+### Extra Features added to Enhance Look and Feel
+### SignUP fixed
+### Logout Fixed
+### MEN Section Code Written
+### WOMEN Section Code Written
+### KIDS Section Code Written
