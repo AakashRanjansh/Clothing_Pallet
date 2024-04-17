@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: 26 مايو 2018 الساعة 15:56
--- إصدار الخادم: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Host: 127.0.0.1
+-- Generation Time: Apr 17, 2024 at 07:01 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `about_us`
+-- Table structure for table `about_us`
 --
 
 CREATE TABLE `about_us` (
@@ -33,10 +32,10 @@ CREATE TABLE `about_us` (
   `about_heading` text NOT NULL,
   `about_short_desc` text NOT NULL,
   `about_desc` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `about_us`
+-- Dumping data for table `about_us`
 --
 
 INSERT INTO `about_us` (`about_id`, `about_heading`, `about_short_desc`, `about_desc`) VALUES
@@ -45,7 +44,7 @@ INSERT INTO `about_us` (`about_id`, `about_heading`, `about_short_desc`, `about_
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `admins`
+-- Table structure for table `admins`
 --
 
 CREATE TABLE `admins` (
@@ -58,19 +57,19 @@ CREATE TABLE `admins` (
   `admin_country` text NOT NULL,
   `admin_job` varchar(255) NOT NULL,
   `admin_about` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `admins`
+-- Dumping data for table `admins`
 --
 
 INSERT INTO `admins` (`admin_id`, `admin_name`, `admin_email`, `admin_pass`, `admin_image`, `admin_contact`, `admin_country`, `admin_job`, `admin_about`) VALUES
-(2, 'Test Name', 'admin@ave.com', '123', 'admin.jpg', '077885221', 'Morocco', 'Front-End Developer', ' Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical ');
+(2, 'Sarthak', 'sarthak@gmail.com', 'sarthak', 'logo-small.png', '45251714141', 'Nepal', 'Front-End Developer', '  Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical  ');
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `bundle_product_relation`
+-- Table structure for table `bundle_product_relation`
 --
 
 CREATE TABLE `bundle_product_relation` (
@@ -78,10 +77,10 @@ CREATE TABLE `bundle_product_relation` (
   `rel_title` varchar(255) NOT NULL,
   `product_id` int(10) NOT NULL,
   `bundle_id` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `bundle_product_relation`
+-- Dumping data for table `bundle_product_relation`
 --
 
 INSERT INTO `bundle_product_relation` (`rel_id`, `rel_title`, `product_id`, `bundle_id`) VALUES
@@ -92,7 +91,7 @@ INSERT INTO `bundle_product_relation` (`rel_id`, `rel_title`, `product_id`, `bun
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `cart`
+-- Table structure for table `cart`
 --
 
 CREATE TABLE `cart` (
@@ -101,12 +100,19 @@ CREATE TABLE `cart` (
   `qty` int(10) NOT NULL,
   `p_price` varchar(255) NOT NULL,
   `size` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`p_id`, `ip_add`, `qty`, `p_price`, `size`) VALUES
+(8, '::1', 4, '100', 'Large');
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `categories`
+-- Table structure for table `categories`
 --
 
 CREATE TABLE `categories` (
@@ -114,10 +120,10 @@ CREATE TABLE `categories` (
   `cat_title` text NOT NULL,
   `cat_top` text NOT NULL,
   `cat_image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `categories`
+-- Dumping data for table `categories`
 --
 
 INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_top`, `cat_image`) VALUES
@@ -129,7 +135,7 @@ INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_top`, `cat_image`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `contact_us`
+-- Table structure for table `contact_us`
 --
 
 CREATE TABLE `contact_us` (
@@ -137,19 +143,19 @@ CREATE TABLE `contact_us` (
   `contact_email` text NOT NULL,
   `contact_heading` text NOT NULL,
   `contact_desc` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `contact_us`
+-- Dumping data for table `contact_us`
 --
 
 INSERT INTO `contact_us` (`contact_id`, `contact_email`, `contact_heading`, `contact_desc`) VALUES
-(1, 'sad.ahmed22224@gmail.com', 'Contact  To Us', 'If you have any questions, please feel free to contact us, our customer service center is working for you 24/7.');
+(1, 'sarthak@gmail.com', 'Contact  To Us', 'If you have any questions, please feel free to contact us, our customer service center is working for you 24/7.');
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `coupons`
+-- Table structure for table `coupons`
 --
 
 CREATE TABLE `coupons` (
@@ -160,10 +166,10 @@ CREATE TABLE `coupons` (
   `coupon_code` varchar(255) NOT NULL,
   `coupon_limit` int(100) NOT NULL,
   `coupon_used` int(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `coupons`
+-- Dumping data for table `coupons`
 --
 
 INSERT INTO `coupons` (`coupon_id`, `product_id`, `coupon_title`, `coupon_price`, `coupon_code`, `coupon_limit`, `coupon_used`) VALUES
@@ -172,7 +178,7 @@ INSERT INTO `coupons` (`coupon_id`, `product_id`, `coupon_title`, `coupon_price`
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `customers`
+-- Table structure for table `customers`
 --
 
 CREATE TABLE `customers` (
@@ -187,19 +193,21 @@ CREATE TABLE `customers` (
   `customer_image` text NOT NULL,
   `customer_ip` varchar(255) NOT NULL,
   `customer_confirm_code` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `customers`
+-- Dumping data for table `customers`
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_ip`, `customer_confirm_code`) VALUES
-(2, 'user', 'user@ave.com', '123', 'United State', 'New York', '0092334566931', 'new york', 'user.jpg', '::1', '');
+(2, 'user', 'sarthak@gmail.com', '123', 'United State', 'New York', '0092334566931', 'new york', 'user.jpg', '::1', ''),
+(3, 'Sarthak', 'sahaakashranjan@outlook.com', '12345', 'India', 'Bangalore', '08088269159', 'Bangalore', '740ef9834c58355dea37350d256a6ebb.jpg', '::1', '1762213111'),
+(4, 'Aakash Ranjan Sah', 'test@gmail.com', 'Aakash', 'Nepal', 'Kathmandu', '9800201088', 'KTM', 'Screenshot (79).png', '::1', '1505025848');
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `customer_orders`
+-- Table structure for table `customer_orders`
 --
 
 CREATE TABLE `customer_orders` (
@@ -209,12 +217,12 @@ CREATE TABLE `customer_orders` (
   `invoice_no` int(100) NOT NULL,
   `qty` int(10) NOT NULL,
   `size` text NOT NULL,
-  `order_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `order_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `order_status` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `customer_orders`
+-- Dumping data for table `customer_orders`
 --
 
 INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice_no`, `qty`, `size`, `order_date`, `order_status`) VALUES
@@ -223,21 +231,22 @@ INSERT INTO `customer_orders` (`order_id`, `customer_id`, `due_amount`, `invoice
 (18, 2, 300, 1715523401, 1, 'Medium', '2017-02-20 08:21:42', 'pending'),
 (19, 2, 150, 1068059025, 1, 'Medium', '2017-02-20 08:26:47', 'pending'),
 (20, 2, 288, 909940689, 3, 'Large', '2017-02-27 11:06:32', 'complete'),
-(21, 2, 400, 909940689, 2, 'Meduim', '2017-02-27 11:06:37', 'complete');
+(21, 2, 400, 909940689, 2, 'Meduim', '2017-02-27 11:06:37', 'complete'),
+(22, 2, 150, 58245252, 3, 'Small', '2024-04-11 03:54:51', 'pending');
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `enquiry_types`
+-- Table structure for table `enquiry_types`
 --
 
 CREATE TABLE `enquiry_types` (
   `enquiry_id` int(10) NOT NULL,
   `enquiry_title` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `enquiry_types`
+-- Dumping data for table `enquiry_types`
 --
 
 INSERT INTO `enquiry_types` (`enquiry_id`, `enquiry_title`) VALUES
@@ -248,7 +257,7 @@ INSERT INTO `enquiry_types` (`enquiry_id`, `enquiry_title`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `manufacturers`
+-- Table structure for table `manufacturers`
 --
 
 CREATE TABLE `manufacturers` (
@@ -256,10 +265,10 @@ CREATE TABLE `manufacturers` (
   `manufacturer_title` text NOT NULL,
   `manufacturer_top` text NOT NULL,
   `manufacturer_image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `manufacturers`
+-- Dumping data for table `manufacturers`
 --
 
 INSERT INTO `manufacturers` (`manufacturer_id`, `manufacturer_title`, `manufacturer_top`, `manufacturer_image`) VALUES
@@ -272,7 +281,7 @@ INSERT INTO `manufacturers` (`manufacturer_id`, `manufacturer_title`, `manufactu
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `payments`
+-- Table structure for table `payments`
 --
 
 CREATE TABLE `payments` (
@@ -283,10 +292,10 @@ CREATE TABLE `payments` (
   `ref_no` int(10) NOT NULL,
   `code` int(10) NOT NULL,
   `payment_date` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `payments`
+-- Dumping data for table `payments`
 --
 
 INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `ref_no`, `code`, `payment_date`) VALUES
@@ -296,7 +305,7 @@ INSERT INTO `payments` (`payment_id`, `invoice_no`, `amount`, `payment_mode`, `r
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `pending_orders`
+-- Table structure for table `pending_orders`
 --
 
 CREATE TABLE `pending_orders` (
@@ -307,10 +316,10 @@ CREATE TABLE `pending_orders` (
   `qty` int(10) NOT NULL,
   `size` text NOT NULL,
   `order_status` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `pending_orders`
+-- Dumping data for table `pending_orders`
 --
 
 INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_id`, `qty`, `size`, `order_status`) VALUES
@@ -319,12 +328,13 @@ INSERT INTO `pending_orders` (`order_id`, `customer_id`, `invoice_no`, `product_
 (18, 2, 1715523401, '11', 1, 'Medium', 'pending'),
 (19, 2, 1068059025, '7', 1, 'Medium', 'pending'),
 (20, 2, 909940689, '6', 3, 'Large', 'complete'),
-(21, 2, 909940689, '11', 2, 'Meduim', 'complete');
+(21, 2, 909940689, '11', 2, 'Meduim', 'complete'),
+(22, 2, 58245252, '9', 3, 'Small', 'pending');
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -332,7 +342,7 @@ CREATE TABLE `products` (
   `p_cat_id` int(10) NOT NULL,
   `cat_id` int(10) NOT NULL,
   `manufacturer_id` int(10) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `product_title` text NOT NULL,
   `product_url` text NOT NULL,
   `product_img1` text NOT NULL,
@@ -346,10 +356,10 @@ CREATE TABLE `products` (
   `product_keywords` text NOT NULL,
   `product_label` text NOT NULL,
   `status` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `manufacturer_id`, `date`, `product_title`, `product_url`, `product_img1`, `product_img2`, `product_img3`, `product_price`, `product_psp_price`, `product_desc`, `product_features`, `product_video`, `product_keywords`, `product_label`, `status`) VALUES
@@ -362,12 +372,13 @@ INSERT INTO `products` (`product_id`, `p_cat_id`, `cat_id`, `manufacturer_id`, `
 (7, 4, 2, 6, '2017-02-15 10:49:07', 'Nice Solid Long Coat With Lace', 'product-url-7', 'fur coat with button1.jpg', 'fur coat with button2.jpg', 'fur coat with button3.jpg', 200, 150, '<p>Video provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document. kingVideo provides a powerful way to help you prove your point. When you click Online Video, you can paste in the embed code for the video you want to add. You can also type a keyword to search online for the video that best fits your document</p>', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,', '<iframe width=\"854\" height=\"480\" src=\"https://www.youtube.com/embed/qRswlmADRa8\" frameborder=\"0\" allowfullscreen></iframe>', 'Coats', 'Sale', 'product'),
 (8, 4, 2, 4, '2017-02-15 10:49:11', 'Sleeveless Faux Fur Hybrid Coat', 'product-url-8', 'Black Blouse Versace Coat1.jpg', 'Black Blouse Versace Coat2.jpg', 'Black Blouse Versace Coat3.jpg', 245, 100, '<p>Integer tristique dictum sapien et lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed imperdiet magna, at rhoncus arcu. Cras tincidunt felis eu vehicula consequat. Proin vel gravida quam. In tincidunt aliquam nisl. Sed velit erat, aliquam sit amet metus eget, molestie auctor nulla.Integer tristique dictum sapien et lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed imperdiet magna, at rhoncus arcu. Cras tincidunt felis eu vehicula consequat. Proin vel gravida quam. In tincidunt aliquam nisl. Sed velit erat, aliquam sit amet metus eget, molestie auctor nulla.</p>', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,', '<iframe width=\"854\" height=\"480\" src=\"https://www.youtube.com/embed/qRswlmADRa8\" frameborder=\"0\" allowfullscreen></iframe>', 'Coats', 'Gift', 'product'),
 (9, 5, 4, 2, '2017-02-19 06:46:14', 'Remind Printed T-Shirt', 'product-url-9', 'product-1.jpg', 'product-2.jpg', 'product-3.jpg', 50, 0, '<p>Integer tristique dictum sapien et lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed imperdiet magna, at rhoncus arcu. Cras tincidunt felis eu vehicula consequat. Proin vel gravida quam. In tincidunt aliquam nisl. Sed velit erat, aliquam sit amet metus eget, molestie auctor nulla.Integer tristique dictum sapien et lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed sed imperdiet magna, at rhoncus arcu. Cras tincidunt felis eu vehicula consequat. Proin vel gravida quam. In tincidunt aliquam nisl. Sed velit erat, aliquam sit amet metus eget, molestie auctor nulla.</p>', 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,', '<iframe width=\"854\" height=\"480\" src=\"https://www.youtube.com/embed/qRswlmADRa8\" frameborder=\"0\" allowfullscreen></iframe>', 'T-Shirt', 'New', 'product'),
-(11, 7, 5, 5, '2017-02-20 06:21:03', 'jacket bundle', 'jacket-bundle', 'jacket-1.jpg', 'jacket-2.jpg', 'jacket-3.jpg', 300, 200, '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>', '<iframe width=\"854\" height=\"480\" src=\"https://www.youtube.com/embed/qImi3vNccaU\" frameborder=\"0\" allowfullscreen></iframe>', 'jacket bundle', 'Sale', 'bundle');
+(11, 7, 5, 5, '2017-02-20 06:21:03', 'jacket bundle', 'jacket-bundle', 'jacket-1.jpg', 'jacket-2.jpg', 'jacket-3.jpg', 300, 200, '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>', '<iframe width=\"854\" height=\"480\" src=\"https://www.youtube.com/embed/qImi3vNccaU\" frameborder=\"0\" allowfullscreen></iframe>', 'jacket bundle', 'Sale', 'bundle'),
+(12, 5, 3, 6, '2024-04-17 04:58:36', 'Motu Patlu Dress', 'Motu-Patlu-Dress', '740ef9834c58355dea37350d256a6ebb.jpg', '740ef9834c58355dea37350d256a6ebb.jpg', '740ef9834c58355dea37350d256a6ebb.jpg', 2500, 2000, '\r\n\r\nmotu', '\r\n\r\nmotu', '\r\n\r\n', 'motu', 'motu', 'product');
 
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `product_categories`
+-- Table structure for table `product_categories`
 --
 
 CREATE TABLE `product_categories` (
@@ -375,10 +386,10 @@ CREATE TABLE `product_categories` (
   `p_cat_title` text NOT NULL,
   `p_cat_top` text NOT NULL,
   `p_cat_image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `product_categories`
+-- Dumping data for table `product_categories`
 --
 
 INSERT INTO `product_categories` (`p_cat_id`, `p_cat_title`, `p_cat_top`, `p_cat_image`) VALUES
@@ -390,7 +401,7 @@ INSERT INTO `product_categories` (`p_cat_id`, `p_cat_title`, `p_cat_top`, `p_cat
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `store`
+-- Table structure for table `store`
 --
 
 CREATE TABLE `store` (
@@ -400,10 +411,10 @@ CREATE TABLE `store` (
   `store_desc` text NOT NULL,
   `store_button` varchar(255) NOT NULL,
   `store_url` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `store`
+-- Dumping data for table `store`
 --
 
 INSERT INTO `store` (`store_id`, `store_title`, `store_image`, `store_desc`, `store_button`, `store_url`) VALUES
@@ -414,7 +425,7 @@ INSERT INTO `store` (`store_id`, `store_title`, `store_image`, `store_desc`, `st
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `terms`
+-- Table structure for table `terms`
 --
 
 CREATE TABLE `terms` (
@@ -422,10 +433,10 @@ CREATE TABLE `terms` (
   `term_title` varchar(100) NOT NULL,
   `term_link` varchar(100) NOT NULL,
   `term_desc` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `terms`
+-- Dumping data for table `terms`
 --
 
 INSERT INTO `terms` (`term_id`, `term_title`, `term_link`, `term_desc`) VALUES
@@ -436,17 +447,17 @@ INSERT INTO `terms` (`term_id`, `term_title`, `term_link`, `term_desc`) VALUES
 -- --------------------------------------------------------
 
 --
--- بنية الجدول `wishlist`
+-- Table structure for table `wishlist`
 --
 
 CREATE TABLE `wishlist` (
   `wishlist_id` int(10) NOT NULL,
   `customer_id` int(10) NOT NULL,
   `product_id` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- إرجاع أو استيراد بيانات الجدول `wishlist`
+-- Dumping data for table `wishlist`
 --
 
 INSERT INTO `wishlist` (`wishlist_id`, `customer_id`, `product_id`) VALUES
@@ -608,13 +619,13 @@ ALTER TABLE `coupons`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `customer_orders`
 --
 ALTER TABLE `customer_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `enquiry_types`
@@ -638,13 +649,13 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT for table `pending_orders`
 --
 ALTER TABLE `pending_orders`
-  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `order_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `product_categories`
