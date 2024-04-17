@@ -113,12 +113,12 @@ include("includes/main.php");
           <div class="footer-nav__col footer-nav__col--contacts">
             <div class="footer-nav__heading">Contact details</div>
             <address class="address">
-            Head Office: Avenue Fashion.<br>
-            180-182 Regent Street, London.
+            <br>
+           
           </address>
             <div class="phone">
               Telephone:
-              <a class="phone__number" href="tel:0123456789">0123-456-789</a>
+              <a class="phone__number" href="tel:0123456789"></a>
             </div>
             <div class="email">
               Email:
@@ -158,15 +158,15 @@ include("includes/main.php");
         <div class="container clearfix">
 
           <div class="copyright">
-            &copy; 2018 Avenue Fashion&trade;
+            &copy; 2024 clothing palette pvt ltd
           </div>
 
           <div class="developer">
-            Dev by Yasser Dalouzi
+            Dev by Sarthak
           </div>
 
           <div class="designby">
-            Design by Yasser Dalouzi
+            Design by Sarthak
           </div>
 
         </div>
