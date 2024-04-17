@@ -158,7 +158,7 @@ include("includes/main.php");
         <div class="container clearfix">
 
           <div class="copyright">
-            &copy; 2024 clothing palette pvt ltd
+            &copy; 2024 Clothing Palette pvt ltd
           </div>
 
           <div class="developer">

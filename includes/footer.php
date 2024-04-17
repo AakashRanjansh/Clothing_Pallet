@@ -72,16 +72,15 @@
 			<div class="footer-nav__col footer-nav__col--contacts">
 				<div class="footer-nav__heading">Contact details</div>
 				<address class="address">
-				Head Office: Avenue Fashion.<br>
-				180-182 Regent Street, London.
+				
 			</address>
 				<div class="phone">
 					Telephone:
-					<a class="phone__number" href="tel:0123456789">0123-456-789</a>
+					<a class="phone__number" href="tel:0123456789"></a>
 				</div>
 				<div class="email">
 					Email:
-					<a href="mailto:support@yourwebsite.com" class="email__addr">support@yourwebsite.com</a>
+					<a href="mailto:support@yourwebsite.com" class="email__addr">sarthak@gmail.com</a>
 				</div>
 			</div>
 
@@ -117,17 +116,14 @@
 		<div class="container clearfix">
 
 			<div class="copyright">
-				&copy; 2022 Avenue Fashion&trade;
+				&copy;  2024 Clothing Palette pvt ltd
 			</div>
 
 			<div class="developer">
-				Developed by Ian.
+				Developed by sarthak
 			</div>
 
-			<div class="designby">
-				<li> Initial Design by Yasser Dalouzi</li>
-				<li> Design updated by Ian</li>
-			</div>
+			
 		</div>
 	</div>
 </footer>
