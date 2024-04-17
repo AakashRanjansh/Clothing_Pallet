@@ -13,7 +13,7 @@ include("includes/main.php");
     <!-- HERO -->
     <div class="nero">
       <div class="nero__heading">
-        <span class="nero__bold">shop</span> AT Clothing Palette
+        <span class="nero__bold">Women's Fashion </span>Clothing Palette
       </div>
       <p class="nero__text">
       </p>
@@ -30,16 +30,21 @@ include("includes/main.php");
 
 </div><!--- col-md-12 Ends -->
 
-<div class="col-md-3"><!-- col-md-3 Starts -->
+<div class="col-md-4"><!-- col-md-3 Starts -->
 
-<?php include("includes/sidebar.php"); ?>
+
 
 </div><!-- col-md-3 Ends -->
 
 <div class="col-md-9" ><!-- col-md-9 Starts --->
 
 
-<?php getProducts(); ?>
+<?php getProductswomen(); 
+
+
+
+
+?>
 
 </div><!-- row Ends -->
 

@@ -92,7 +92,7 @@
 		<div class="container clearfix">
 
 			<div class="banner-award">
-				<span>Award winner</span><br> Fashion awards 2022
+				<span>Award winner</span><br> Fashion awards 2024
 			</div>
 
 			<div class="banner-social">

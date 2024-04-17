@@ -66,7 +66,7 @@ if(!isset($_SESSION['customer_email'])){
 
         <div class="logo">
           <a class="logo__link" href="index.php">
-            <img class="logo__img" src="images/logo.png" alt="Avenue fashion logotype" width="237" height="19">
+            <img class="logo__img" src="images/logo.png" alt=" logotype" width="237" height="19">
           </a>
         </div>
 
@@ -74,18 +74,27 @@ if(!isset($_SESSION['customer_email'])){
           <ul class="categories">
 
             <li class="categories__item">
-              <a class="categories__link" href="#">
+              <a class="categories__link" href="men.php">
                 Mens
                
               </a>
               </li>
 
             <li class="categories__item">
-              <a class="categories__link" href="#">
+              <a class="categories__link" href="women.php">
                 Womens
                
               </a>
             </li>
+
+
+            <li class="categories__item">
+              <a class="categories__link" href="kids.php">
+                kids
+               
+              </a>
+            </li>
+
 
             <li class="categories__item">
               <a class="categories__link categories__link--active" href="shop.php">
@@ -93,11 +102,6 @@ if(!isset($_SESSION['customer_email'])){
               </a>
             </li>
 
-            <li class="categories__item">
-              <a class="categories__link" href="localstore.php">
-                Local Stores
-              </a>
-            </li>
 
           <li class="categories__item">
               <a class="categories__link" href="customer/my_account.php?my_orders">
