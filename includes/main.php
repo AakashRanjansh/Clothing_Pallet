@@ -51,7 +51,7 @@ if(!isset($_SESSION['customer_email'])){
 } 
   else
   { 
-      echo '<a href="../logout.php" class="login__link">Log out</a>';
+      echo '<a href="logout.php" class="login__link">Log out</a>';
   }   
 ?>  
   
